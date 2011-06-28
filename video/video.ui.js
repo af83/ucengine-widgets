@@ -36,9 +36,9 @@ $.uce.Video.prototype = {
     },
     _getFlashSrc: function() {
         if (this._publish)
-            return '/lib/video/publish_video.swf';
+            return 'video/publish_video.swf';
         else
-            return '/lib/video/receive_video.swf';
+            return 'video/receive_video.swf';
     },
     _getFlashVar: function() {
         return $.param({wmode      : 'opaque',

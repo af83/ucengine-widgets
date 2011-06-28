@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+        <link rel="stylesheet" href="tests/qunit.css" type="text/css" media="screen" />
+
+        <script type="text/javascript" src="tests/qunit.js"></script>
+        <script type="text/javascript" src="tests/testrunner.js"></script>
+
+        <script type="text/javascript" src="jquery-ui-1.8.4.custom.min.js"></script>
+
+        <script type="text/javascript" src="tests/jack.js"></script>
+        <script type="text/javascript" src="tests/jquery.mockjax.js"></script>
+        <script type="text/javascript" src="tests/syn.js"></script>
+
+        <script type="text/javascript" src="https://raw.github.com/AF83/ucengine/develop/priv/www/lib/uce.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/AF83/ucengine/develop/priv/www/lib/ucewidget.js"></script>
+
+        <script type="text/javascript" src="whiteboard/whiteboard.js"></script>
+        <script type="text/javascript" src="whiteboard/whiteboard.ui.js"></script>
+
+        <script type="text/javascript" src="video/video.ui.js"></script>
+
+        <script type="text/javascript" src="ajaxupload.js"></script>
+        <script type="text/javascript" src="jquery.strftime-minified.js"></script>
+        <script type="text/javascript" src="file_upload/file_upload.ui.js"></script>
+
+        <script type="text/javascript" src="file_sharing/file_sharing.ui.js"></script>
+
+        <script type="text/javascript" src="chat/chat.ui.js"></script>
+        <script type="text/javascript" src="tests/factories.js"></script>
+        <script type="text/javascript">
+
+function jackTest(name, fun) {
+    test(name, function() {
+        var that = this;
+        jack($.proxy(fun, that));
+        ok(true, "mock are ok");
+    });
+}
+        </script>
+
+        <title>Tests</title>
+    </head>
+    <body>
+        <h1 id="qunit-header">Tests</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+
+        <div id="whiteboard"></div>
+        <div id="chat"></div>
+        <div id="video"></div>
+        <div id="files_shared"></div>
+        <div id="files_uploaded"></div>
+
+        <script type="text/javascript" src="whiteboard/test_uce.whiteboard.js"></script>
+        <script type="text/javascript" src="video/test_uce.video.js"></script>
+        <script type="text/javascript" src="file_upload/test_uce.file_upload.js"></script>
+        <script type="text/javascript" src="file_sharing/test_uce.file_sharing.js"></script>
+        <script type="text/javascript" src="chat/test_uce.chat.js"></script>
+    </body>
+</html>
